@@ -25,7 +25,8 @@ class Projeto extends Model
         'dados_painel',
         'dados_ecommerce',
         'dados_ftp',
-        'excluido'
+        'excluido',
+        'tipoProjeto'
     ];
 
 //Status:1 Em Andamento
@@ -39,8 +40,6 @@ class Projeto extends Model
 //estapa_dev: 4 Validação com o Cliente
 
 
-
-
     protected $table = 'projetos';
 
     public function clientes()
@@ -52,4 +51,5 @@ class Projeto extends Model
     //    return (Clientes::all());
     //}
 }
+
 

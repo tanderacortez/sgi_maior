@@ -87,24 +87,60 @@
 .text-muted {
     color: #868e96!important;
 }
-.h-615{
-    height:615px;
+.h-660{
+    height:660px;
 
 }
 
-/*Badges*/
-.badge-primary {
-    color: #fff;
-    background-color: #007bff;
+/*target*/
+
+.target {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
 }
 
-.badge-danger {
-    color: #fff;
-    background-color: #dc3545;
+.target-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
 }
-.badge-warning {
-    color: #111;
-    background-color: #ffc107;
+
+.badge-secondary {
+    color: #fff !important;
+    background-color: #868e96 !important;
+}
+
+.target-danger {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+}
+.target-warning {
+    color: #111 !important;
+    background-color: #ffc107 !important;
+}
+.target-light {
+    color: #080808 !important;
+    background-color: #e6e6e6 !important;
+}
+.target-success {
+    color: #fff !important;
+    background-color: #28a745 !important;
+}
+
+.target-danger {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+}
+
+.target-dark {
+    color: #fff !important;
+    background-color: #343a40 !important;
 }
 
 .fl{
@@ -116,11 +152,12 @@
 
 .connectedSortable{
     padding: 0;
+    height: 575px;
 }
 
 .panel-drag{
     overflow-y: auto;
-    height:560px;
+    height:600px;
 }
 
 /* CUSTOMIZAÇÃO DA BARRA DE SCROLL */

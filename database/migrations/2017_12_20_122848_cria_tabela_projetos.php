@@ -18,9 +18,10 @@ class CriaTabelaProjetos extends Migration
         $table->increments('id');
         $table->integer('id_cliente')->unsigned();
         $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
-        $table->date('dataInicioContrato');
-        $table->date('dataFimContrato');
-        $table->date('novo_prazo_acordado')->nullable();
+        $table->timestamp('dataInicioContrato');
+        $table->timestamp('dataFimContrato');
+        $table->timestamp('novo_prazo_acordado')->nullable();
+        $table->string('tipoProjeto');
         $table->string('status');
         $table->string('status_motivo')->nullable();
         $table->string('etapa_dev')->nullable();

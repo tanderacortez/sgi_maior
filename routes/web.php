@@ -41,3 +41,6 @@ Route::group(['prefix' => 'projetos'], function (){
     Route::get('/{id}/delete_projetos', 'ProjetosController@delete_projetos'); //chamando o post para inserção dos dados no banco
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
