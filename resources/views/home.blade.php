@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'SGI Maior')
 
 @section('content_header')
 
@@ -17,7 +17,7 @@
 
 @section('content')
 
-    <!--SATUS DE PROJETOS -->
+<!--SATUS DE PROJETOS -->
 
         <div class="row">
             <div class="col-lg-3 col-xs-6">
@@ -430,86 +430,88 @@
             </div>
             <!--  FIM DONE List -->
         </div>
+
         <div class="row">
-            <!-- Inicio Projetos -->
-            <div class="col-md-9">
-                <div class="box box-info">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Projetos</h3>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                        class="fa fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i
-                                        class="fa fa-times"></i></button>
+                <!-- Inicio Projetos -->
+                <div class="col-md-9">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Projetos</h3>
+
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                            class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i
+                                            class="fa fa-times"></i></button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box">
-                        <div class="box-body">
-                            <table id="example" class="table table-bordered table-striped dataTable" cellspacing="0" width="100%">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                                </thead>
-                                <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                                </tfoot>
-                                <tbody>
+                        <!-- /.box-header -->
+                        <div class="box">
+                            <div class="box-body">
+                                <table id="example" class="table table-bordered table-striped dataTable" cellspacing="0" width="100%">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                    </thead>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+                                    </tr>
+                                    </tfoot>
+                                    <tbody>
 
-                                <tr>
-                                    <td>Shad Decker</td>
-                                    <td>Regional Director</td>
-                                    <td>Edinburgh</td>
-                                    <td>51</td>
-                                    <td>2008/11/13</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>$112,000</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <tr>
+                                        <td>Shad Decker</td>
+                                        <td>Regional Director</td>
+                                        <td>Edinburgh</td>
+                                        <td>51</td>
+                                        <td>2008/11/13</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Bruce</td>
+                                        <td>Javascript Developer</td>
+                                        <td>Singapore</td>
+                                        <td>29</td>
+                                        <td>2011/06/27</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donna Snider</td>
+                                        <td>Customer Support</td>
+                                        <td>New York</td>
+                                        <td>27</td>
+                                        <td>2011/01/25</td>
+                                        <td>$112,000</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
                         </div>
                         <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                            <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All
+                                Orders</a>
+                        </div>
+                        <!-- /.box-footer -->
                     </div>
-                    <!-- /.box-body -->
-                    <div class="box-footer clearfix">
-                        <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-                        <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All
-                            Orders</a>
-                    </div>
-                    <!-- /.box-footer -->
                 </div>
-            </div>
-            <!-- Fim Projetos -->
+                <!-- Fim Projetos -->
 
             <!-- Calendario -->
             <div class="col-md-3">

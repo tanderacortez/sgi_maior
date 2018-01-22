@@ -85,7 +85,7 @@
             <div class="pad margin no-print">
                 <div class="callout callout-info" style="margin-bottom: 0!important;">
                     <h4><i class="fa fa-info"></i> Note:</h4>
-                    Projeto adicionado com sucesso!
+                    {{Session::get('message')}}
                 </div>
             </div>
         </div>
@@ -135,6 +135,7 @@
                 <tbody>
                 @if(count($projetos) > 0)
                     @foreach($projetos as $projeto)
+
                         <tr>
                             <td scope="row">{{$projeto->id}}</td>
                             <td>{{$projeto->nome}}</td>
@@ -194,15 +195,15 @@
                             <td><a href="{{ url("/projetos/$projeto->id/detalhe") }}" >
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                 </a>
-                                |<a href="{{ url("/projetos/$projeto->id/editar") }}" >
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true">
-                                    </i>
-                                </a>
-                                |<a href="{{ url("/projetos/$projeto->id/configuracao") }}" >
-                                    <i class="fa fa-cog" aria-hidden="true"></i>
-                                </a>
+
+                                    |<a href="{{ url("/projetos/$projeto->id/editar") }}" >
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true">
+                                        </i>
+                                    </a>
+
                             </td>
                         </tr>
+
                     @endforeach
                 @endif
                 </tbody>

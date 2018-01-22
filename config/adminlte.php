@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -123,7 +124,7 @@ return [
         ],
         [
             'text' => 'Change Password',
-            'url'  => 'admin/settings',
+            'url'  => 'usuarios/editar',
             'icon' => 'lock',
         ],
         [
@@ -132,14 +133,37 @@ return [
             'submenu' => [
                 [
                     'text' => 'Usuários',
-                    'url'  => '#',
+                    'url'  => '/usuarios',
+                    'submenu' => [
+                        [
+                          'text' => 'Listagem',
+                          'url' => 'usuarios',
+                        ],
+                        [
+                            'text' => 'Adicionar',
+                            'url' => 'usuarios/novo',
+                        ]
+                    ],
                 ],
 
                 [
-                    'text' => 'Novo Usuário',
-                    'url'  => '#',
+                    'text' => 'Controle de Acesso',
+                    'url'  => '/usuarios/credenciais',
+                    'submenu' => [
+                        [
+                            'text' => 'Credenciais',
+                            'url'  => 'usuarios/credenciais',
+                        ],
+                        [
+                            'text' => 'Permissões',
+                            'url' => 'usuarios/credenciais/permissoes'
+                        ],
+                    ],
+
                 ],
+
             ],
+
         ],
         'CLIENTES',
         [
