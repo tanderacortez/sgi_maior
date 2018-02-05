@@ -55,4 +55,11 @@ class ClientesController extends Controller
         $delete = $cliente->delete();
         return redirect('/clientes')->with("message", "Cliente excluído com sucesso!");
     }
+
+    public function detalhe (Request $request){
+        $list_dados = Cliente::find($request->id);
+        return view ('clientes._modalDetalhe', [
+           'cliente' => $list_dados
+        ]);
+    }
 }

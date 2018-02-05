@@ -5,7 +5,7 @@
 @section('content_header')
 
     <h1>
-        Projetos
+        Tarefas
         <small>Listagem</small>
     </h1>
     <ol class="breadcrumb">
@@ -192,16 +192,14 @@
                                 ?>
 
                             </td>
-                            <td style="width: 130px;"><a href="{{ url("/projetos/$projeto->id/detalhe") }}" data-toggle="modal" data-target="#modal-info" class="btn btn-info">
-                                    <i class="fa fa-eye"></i>
+                            <td><a href="{{ url("/projetos/$projeto->id/detalhe") }}" >
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
                                 </a>
-                                <a href="{{ url("/projetos/$projeto->id/editar") }}" class="btn btn-warning">
+
+                                    |<a href="{{ url("/projetos/$projeto->id/editar") }}" >
                                         <i class="fa fa-pencil-square-o" aria-hidden="true">
                                         </i>
-                                </a>
-                                <a href="{{ url("/projetos/$projeto->id/delete") }}" class="btn btn-danger" >
-                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                </a>
+                                    </a>
 
                             </td>
                         </tr>
@@ -224,17 +222,6 @@
     </div>
     <!-- Fim Clientes -->
 
-<!-- Modal de detalhe de Projetos-->
-    <div class="modal modal-info fade" id="modal-info">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!--conteudo do modal projetos/_modalDetalhe.blade-->
-            </div>
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
-<!-- /.modal -->
-<!-- Fim Modal de Projetos -->
 
 
 @stop

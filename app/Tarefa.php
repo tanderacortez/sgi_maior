@@ -12,6 +12,7 @@ class Tarefa extends Model
         'id_projeto',
         'id_executor',
         'id_responsavel',
+        'id_criador',
         'titulo',
         'descricao',
         'imagem',
@@ -45,6 +46,11 @@ class Tarefa extends Model
     public function projetos()
     { //Traz a pessoa referente ao telefone
         return $this->belongsTo('App\Projeto', 'id_projeto', 'id');
+    }
+
+    public function interacoes(){ //Traz o projeto relacionado ao cliente.
+        return $this->hasMany(Interacao::class, 'id_tarefa');
+
     }
 
     // public function todos_clientes(){

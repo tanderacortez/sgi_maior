@@ -61,5 +61,11 @@ class ProjetosController extends Controller
         ]);
     }
 
+    public function delete (Request $request){
+        $projeto = $this->getProjetos($request->id);
+        $delete = $projeto->delete();
+        return redirect('/projetos')->with("message", "Projeto excluído com sucesso!");
+    }
+
 
 }

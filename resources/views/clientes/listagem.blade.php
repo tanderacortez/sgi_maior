@@ -108,10 +108,8 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Responsável</th>
                             <th>Empresa</th>
                             <th>E-mail</th>
-                            <th>Celular</th>
                             <th>Relacionamento</th>
                             <th>Atendimento</th>
                             <th>Ações</th>
@@ -120,10 +118,8 @@
                         <tfoot>
                         <tr>
                             <th>Id</th>
-                            <th>Responsável</th>
                             <th>Empresa</th>
                             <th>E-mail</th>
-                            <th>Celular</th>
                             <th>Relacionamento</th>
                             <th>Atendimento</th>
                             <th>Ações</th>
@@ -135,25 +131,25 @@
                             @foreach($clientes as $clientes_result)
                                 <tr>
                                     <td scope="row">{{$clientes_result->id}}</td>
-                                    <td>{{$clientes_result->nome_resp}}</td>
                                     <td>{{$clientes_result->empresa}}</td>
                                     <td>{{$clientes_result->email}}</td>
-                                    <td>{{$clientes_result->dddcel}} {{$clientes_result->celular}}</td>
                                     <td>{{$clientes_result->status_relacionamento}}</td>
                                     <td>{{$clientes_result->atendimento}}</td>
 
-                                    <td>
-                                        <a href="{{ url("/$clientes_result->id/clientes/detalhe") }}" >
-                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                    <td align="center">
+                                        <a href="{{ route('clientes.detalhe', $clientes_result->id) }}" data-toggle="modal" data-target="#modal-info" class="btn btn-info">
+                                            <i class="fa fa-eye"></i>
                                         </a>
-                                        &nbsp;|&nbsp;<a href="{{ url("/clientes/$clientes_result->id/editar") }}" >
+
+                                        <a href="{{ url("/clientes/$clientes_result->id/editar") }}" class="btn btn-warning">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true">
                                             </i>
                                         </a>
-                                        &nbsp;|&nbsp;<a href="{{ url("/clientes/$clientes_result->id/delete") }}" >
+                                        <a href="{{ url("/clientes/$clientes_result->id/delete") }}" class="btn btn-danger" >
                                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                                         </a>
                                     </td>
+
                                 </tr>
                             @endforeach
                         @endif
@@ -173,31 +169,45 @@
     </div>
     <!-- Fim Clientes -->
 
+<!-- Modal de detalhe de clientes-->
+    <div class="modal modal-info fade" id="modal-info">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--conteudo do modal clientes/_modalDetalhe.blade-->
+            </div>
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+<!-- Fim Modal de detalhe -->
+
+@stop
 
 
- @stop
 
 
+@section('js')
 
+<script type="text/javascript">
+    //Limpa o cache dos modais após o fechamento
+    //Ajuda no modal editar, pq senão ele puxa sempre o mesmo registro
+    $('body').on('hidden.bs.modal', '.modal', function () {
+        $(this).removeData('bs.modal');
+    });
 
-        @section('js')
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            "language": {
+                "lengthMenu": "Display _MENU_ records per page",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
+            }
+        } );
+    } );
 
-            <script type="text/javascript">
-
-
-                $(document).ready(function() {
-                    $('#example').DataTable( {
-                        "language": {
-                            "lengthMenu": "Display _MENU_ records per page",
-                            "zeroRecords": "Nothing found - sorry",
-                            "info": "Showing page _PAGE_ of _PAGES_",
-                            "infoEmpty": "No records available",
-                            "infoFiltered": "(filtered from _MAX_ total records)"
-                        }
-                    } );
-                } );
-
-                // The Calender
-                $('#calendar').datepicker();
-            </script>
+    // The Calender
+    $('#calendar').datepicker();
+</script>
 @stop

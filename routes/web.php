@@ -24,6 +24,7 @@ Route::group(['prefix' => 'clientes'], function (){
     Route::get('/novo', 'ClientesController@viewNovo')->name('clientes.novo');
     Route::post('/store', 'ClientesController@store'); //chamando o post para inserção dos dados no banco
     Route::post('/update', 'ClientesController@update'); //chamando o post para inserção dos dados no banco
+    Route::get('/{id}/detalhe', 'ClientesController@detalhe')->name('clientes.detalhe');
     Route::get('/{id}/editar', 'ClientesController@viewEditar')->name('clientes.editar');
     Route::get('/{id}/delete', 'ClientesController@delete'); //chamando o post para inserção dos dados no banco
 });
@@ -35,8 +36,8 @@ Route::group(['prefix' => 'projetos'], function (){
     Route::post('/store', 'ProjetosController@store'); //chamando o post para inserção dos dados no banco
     Route::post('/update', 'ProjetosController@update'); //chamando o post para inserção dos dados no banco
     Route::get('/{id}/editar', 'ProjetosController@viewEditar');
-    Route::get('/{id}/detalhe', 'ProjetosController@viewNovo');
-    Route::get('/{id}/delete_projetos', 'ProjetosController@delete_projetos'); //chamando o post para inserção dos dados no banco
+    Route::get('/{id}/detalhe', 'ProjetosController@detalhe');
+    Route::get('/{id}/delete', 'ProjetosController@delete'); //chamando o post para inserção dos dados no banco
 
 });
 

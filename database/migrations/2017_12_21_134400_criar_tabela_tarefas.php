@@ -22,6 +22,8 @@ class CriarTabelaTarefas extends Migration
             $table->foreign('id_responsavel')->references('id')->on('users')->onDelete('cascade');
             $table->integer('id_executor')->unsigned();
             $table->foreign('id_executor')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_criador')->unsigned();
+            $table->foreign('id_criador')->references('id')->on('users')->onDelete('cascade');
             $table->string('titulo');
             $table->text('descricao');
             $table->string('imagem')->nullable();
@@ -39,7 +41,16 @@ class CriarTabelaTarefas extends Migration
         });
     }
 
-
+    /** campos não nulls
+        Titulo
+        Descricao
+        Data de Entrega
+     * Responsável
+     * Executor
+     *
+     *
+     *
+    */
     /**
      * Reverse the migrations.
      *

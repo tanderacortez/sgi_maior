@@ -154,10 +154,7 @@ return [
                             'text' => 'Credenciais',
                             'url'  => 'usuarios/credenciais',
                         ],
-                        [
-                            'text' => 'Permissões',
-                            'url' => 'usuarios/credenciais/permissoes'
-                        ],
+
                     ],
 
                 ],
